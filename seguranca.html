@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Segurança & Arquitetura // AMAX CRM: Multi-Tenant, Blindagem e LGPD</title>
+  <meta name="description" content="Conheça a infraestrutura de segurança do AMAX CRM: blindagem de carteira por vendedor, banco de dados isolado com WAL, cookies HttpOnly e conformidade com a LGPD.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="canonical" href="http://localhost:3000/site/seguranca">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FFB000'/%3E%3Cpath d='M8 22l6-8 4 5 6-9' stroke='%230A192F' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site-light.css?v=3.2.0">
+</head>
+<body>
+
+  <!-- TOP TELEMETRY STRIP -->
+  <div class="telemetry-strip">
+    <div class="live-pill">
+      <span class="dot-pulse"></span>
+      <span>BLINDAGEM & CONFORMIDADE LGPD</span>
+    </div>
+    <div class="items">
+      <span>CRIPTOGRAFIA: <b>AES-256 / SESSIONS</b></span>
+      <span>SESSÕES: <b>HTTPONLY + CSRF</b></span>
+      <span>ISOLAMENTO: <b>MULTI-TENANT RIGOROSO</b></span>
+    </div>
+  </div>
+
+  <!-- HUD NAVIGATION -->
+  <header class="hud-nav">
+    <a href="/" class="brand-wrapper">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+          <polyline points="16 7 22 7 22 13"></polyline>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-name">AMAX</span>
+        <span class="brand-badge">SEGURANÇA</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Visão Geral</a></li>
+        <li><a href="/recursos">Recursos</a></li>
+        <li><a href="/comparativo">Comparativo</a></li>
+        <li><a href="/precos">Preços & ROI</a></li>
+        <li><a href="/seguranca" class="active">Segurança</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/" class="btn-secondary">Acessar Cockpit</a>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20seguran%C3%A7a%20do%20AMAX%20CRM." class="btn-amber" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section" style="margin-bottom: 70px;">
+    <h1 class="hero-title">
+      Segurança de Dados e <span class="solid-blue">Isolamento Cirúrgico</span>.
+    </h1>
+    <p class="hero-subtitle">
+      Seus leads são o maior ativo da sua empresa. Descubra como a arquitetura do AMAX CRM protege sua base contra vazamentos, espionagem interna e perda acidental.
+    </p>
+  </section>
+
+  <!-- PILARES DE SEGURANÇA -->
+  <section class="content-section">
+    <div class="section-head">
+      <h2 class="section-title">Arquitetura de proteção corporativa em múltiplas camadas.</h2>
+      <p class="section-desc">Padrões rígidos de isolamento aplicados desde a primeira linha de código.</p>
+    </div>
+
+    <div class="modules-grid">
+      
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <span>PILAR // 01 · PERMISSÕES</span>
+          </div>
+          <h3 class="mod-title">Blindagem de Carteira por Vendedor</h3>
+          <p class="mod-text">
+            Em planilhas ou sistemas mal configurados, um vendedor consegue ver a carteira inteira da empresa ou exportar contatos antes de sair. No AMAX, operadores têm acesso restrito aos leads delegados a eles. Vendedores não visualizam a comissão de colegas nem podem exportar a base.
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>CONTROLE: <b>POR PAPEL (RBAC)</b></span>
+          <span>EXPORTAÇÃO: <b>RESTRITA AO ADMIN</b></span>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <span>PILAR // 02 · ARQUITETURA</span>
+          </div>
+          <h3 class="mod-title">Banco com Isolamento Multi-Tenant</h3>
+          <p class="mod-text">
+            Cada empresa opera com identificadores únicos e regras de negócio separadas. Não há risco de cruzamento de dados entre clientes distintos. O motor SQLite operando em modo WAL (Write-Ahead Logging) garante altíssima concorrência sem bloqueio de tabelas.
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>BANCO: <b>SQLITE EM MODO WAL</b></span>
+          <span>CONCORRÊNCIA: <b>ALTA PERFORMANCE</b></span>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <span>PILAR // 03 · CONEXÃO</span>
+          </div>
+          <h3 class="mod-title">Sessões Protegidas por Cookies HttpOnly</h3>
+          <p class="mod-text">
+            Sessões gerenciadas através de cookies seguros com flag HttpOnly e SameSite, prevenindo ataques do tipo XSS (Cross-Site Scripting) e roubo de tokens no navegador do usuário.
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>PROTEÇÃO: <b>ANTI-XSS & ANTI-CSRF</b></span>
+          <span>SESSÃO: <b>EXPIRAÇÃO CONTROLADA</b></span>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <span>PILAR // 04 · PRIVACIDADE</span>
+          </div>
+          <h3 class="mod-title">Conformidade Nativa com a LGPD</h3>
+          <p class="mod-text">
+            O sistema disponibiliza mecanismo simples para exclusão e anonimização de dados caso um lead solicite o encerramento do contato, respeitando integralmente as exigências da Lei Geral de Proteção de Dados (Lei 13.709/2018).
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>LEI: <b>LGPD BRASIL</b></span>
+          <span>DIREITO: <b>REVOGAÇÃO & EXCLUSÃO</b></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name" style="color: #FFFFFF; font-size: 1.3rem;">AMAX // CRM</span>
+        <p class="footer-desc">
+          O sistema operacional comercial para operações que fecham no WhatsApp.
+          <br><br>
+          © 2026 AMAX CRM. Todos os direitos reservados.
+        </p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Navegação</h5>
+          <ul>
+            <li><a href="/">Visão Geral</a></li>
+            <li><a href="/recursos">Recursos Técnicos</a></li>
+            <li><a href="/comparativo">Comparativo vs Planilhas</a></li>
+            <li><a href="/precos">Planos & Preços</a></li>
+            <li><a href="/seguranca">Segurança & LGPD</a></li>
+            <li><a href="/contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/site-light.js?v=3.2.0"></script>
+</body>
+</html>

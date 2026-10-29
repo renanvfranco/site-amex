@@ -1,0 +1,22 @@
+{
+  "name": "site-amex",
+  "version": "1.0.0",
+  "description": "Site Oficial do AMAX CRM — Executive Light Avant-Garde Tech",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -l 3001 .",
+    "start": "npx serve -l 3001 ."
+  },
+  "keywords": [
+    "crm",
+    "amax",
+    "amex",
+    "landing-page",
+    "threejs",
+    "webgl",
+    "b2b",
+    "whatsapp-sales"
+  ],
+  "author": "AMAX CRM Team",
+  "license": "MIT"
+}

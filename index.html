@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AMAX CRM // O Sistema Operacional Comercial para Fechamento no WhatsApp</title>
+  <meta name="description" content="O terminal comercial de alta precisão projetado para operações que se recusam a perder faturamento no WhatsApp. Cadência automática de 4 etapas, acionamento em 1 clique e blindagem multi-tenant.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="canonical" href="http://localhost:3000/site">
+
+  <!-- OpenGraph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AMAX CRM // The Commercial Operating System">
+  <meta property="og:description" content="Substitua planilhas abandonadas e CRMs caros em dólar por um cockpit de velocidade brutal e cadência de 4 etapas no WhatsApp.">
+  <meta property="og:image" content="/img/amax-terminal-hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FFB000'/%3E%3Cpath d='M8 22l6-8 4 5 6-9' stroke='%230A192F' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Fonts: Bricolage Grotesque, DM Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/site-light.css?v=3.2.0">
+
+  <!-- GEO & SEO JSON-LD Structured Data for AI & Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "AMAX CRM",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All (Web, iOS PWA, Android PWA)",
+        "description": "Terminal comercial de alta velocidade focado em fechamento de vendas pelo WhatsApp com cadência automática de 4 etapas e isolamento multi-tenant.",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "BRL",
+          "lowPrice": "147",
+          "highPrice": "697"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "AMAX Commercial Operating System",
+        "url": "http://localhost:3000/site",
+        "logo": "http://localhost:3000/img/app-icon.svg"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- TOP STATUS TELEMETRY STRIP -->
+  <div class="telemetry-strip">
+    <div class="live-pill">
+      <span class="dot-pulse"></span>
+      <span>AMAX OS v2.4 // OPERATIONAL</span>
+    </div>
+    <div class="items">
+      <span>UPTIME DO SISTEMA: <b>99.98%</b></span>
+      <span>LATÊNCIA MÉDIA: <b id="hud-latency">12ms</b></span>
+      <span>VELOCIDADE DE RESPOSTA: <b>4.8X</b></span>
+      <span>ARQUITETURA: <b>SQLITE-WAL / MULTI-TENANT</b></span>
+    </div>
+  </div>
+
+  <!-- TOP HUD NAVIGATION -->
+  <header class="hud-nav">
+    <a href="/" class="brand-wrapper">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+          <polyline points="16 7 22 7 22 13"></polyline>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-name">AMAX</span>
+        <span class="brand-badge">CRM</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Visão Geral</a></li>
+        <li><a href="/recursos">Recursos</a></li>
+        <li><a href="/comparativo">Comparativo</a></li>
+        <li><a href="/precos">Preços & ROI</a></li>
+        <li><a href="/seguranca">Segurança</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/" class="btn-secondary">Acessar Cockpit</a>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vi%20o%20site%20do%20AMAX%20CRM%20e%20quero%20solicitar%20uma%20demonstra%C3%A7%C3%A3o." class="btn-amber" target="_blank" rel="noopener">
+        <span>Falar no WhatsApp</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <h1 class="hero-title">
+      O Cockpit Comercial Que Impede Sua Equipe de <span class="solid-blue">Perder Vendas no WhatsApp</span>.
+    </h1>
+
+    <p class="hero-subtitle">
+      Esqueça planilhas confusas e CRMs corporativos inflados em dólar. O AMAX organiza seu funil comercial com <b>cadência automática de 4 etapas</b>, acionamento do WhatsApp em 1 clique e blindagem de carteira por vendedor.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20iniciar%20a%20implanta%C3%A7%C3%A3o%20do%20AMAX%20CRM%20na%20minha%20empresa." class="btn-primary-lg" target="_blank" rel="noopener">
+        <span>Solicitar Demonstração via WhatsApp</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/recursos" class="btn-blue-outline">
+        <span>Explorar Recursos Técnicos</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 3D THREE.JS CANVAS STAGE & VIEWPORT OF FRAMES -->
+  <div class="hero-3d-stage-wrap">
+    
+    <!-- CANVAS 3D INTERATIVO (THREE.JS HOLOGRAPHIC CORE) -->
+    <div id="three-canvas-container">
+      <div class="canvas-3d-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+        <span>NÚCLEO 3D INTERATIVO // ARRASTE PARA GIRAR</span>
+      </div>
+    </div>
+
+    <!-- TERMINAL COCKPIT VIEWPORT -->
+    <div class="viewport-frame">
+      <div class="frame-chrome">
+        <div class="chrome-dots">
+          <span class="dot-red"></span>
+          <span class="dot-yellow"></span>
+          <span class="dot-green"></span>
+        </div>
+        <div class="chrome-url">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <b>amax.crm/terminal/deals-matrix</b>
+        </div>
+        <div class="chrome-stats">
+          CARTEIRA: <b>BLINDADA // MULTI-TENANT</b>
+        </div>
+      </div>
+
+      <div class="frame-selector-bar">
+        <button class="frame-tab-btn active" data-target="pane-kanban">
+          <span class="tab-num">01</span>
+          <span>Kanban Tátil Interativo</span>
+        </button>
+        <button class="frame-tab-btn" data-target="pane-saas">
+          <span class="tab-num">02</span>
+          <span>Cockpit SaaS Desktop</span>
+        </button>
+        <button class="frame-tab-btn" data-target="pane-empresas">
+          <span class="tab-num">03</span>
+          <span>Gestão Multi-Empresa</span>
+        </button>
+        <button class="frame-tab-btn" data-target="pane-mobile">
+          <span class="tab-num">04</span>
+          <span>Mobile PWA Nativo</span>
+        </button>
+      </div>
+
+      <!-- PANE 1: KANBAN TÁTIL INTERATIVO -->
+      <div class="frame-pane active" id="pane-kanban">
+        <div class="terminal-kanban-board">
+          
+          <div class="kanban-col">
+            <div class="col-header">
+              <span>ENTRADA DE LEADS</span>
+              <span class="col-count">12 LEADS</span>
+            </div>
+            <div class="card-lead">
+              <div class="lead-name">Dra. Camila Vasconcelos</div>
+              <div class="lead-value">R$ 54.000 · Retainer Trimestral</div>
+              <div class="lead-meta">
+                <span class="badge-tag amber">NOVO LEAD</span>
+                <span>Há 8 min</span>
+              </div>
+              <div class="audio-card-box">
+                <div class="audio-header">
+                  <span>ÁUDIO WHATSAPP RECEBIDO</span>
+                  <span>0:42</span>
+                </div>
+                <div class="waveform-strip">
+                  <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                  <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-lead">
+              <div class="lead-name">LogPrime Transportes</div>
+              <div class="lead-value">R$ 38.000 · Consultoria B2B</div>
+              <div class="lead-meta">
+                <span class="badge-tag">INDICAÇÃO</span>
+                <span>Hoje 14:15</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="col-header">
+              <span>CADÊNCIA ATIVA</span>
+              <span class="col-count">8 LEADS</span>
+            </div>
+            <div class="card-lead">
+              <div class="lead-name">Dr. Felipe Arantes</div>
+              <div class="lead-value">R$ 22.000 · Gestão de Tráfego</div>
+              <div class="lead-meta">
+                <span class="badge-tag amber">TENTATIVA 2 / 4</span>
+                <span>WhatsApp 1-clique</span>
+              </div>
+            </div>
+            <div class="card-lead">
+              <div class="lead-name">Empório & Grãos Gourmet</div>
+              <div class="lead-value">R$ 17.500 · Implantação</div>
+              <div class="lead-meta">
+                <span class="badge-tag">TENTATIVA 3 / 4</span>
+                <span>Aguardando Retorno</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="col-header">
+              <span>PROPOSTA EM ANÁLISE</span>
+              <span class="col-count">5 LEADS</span>
+            </div>
+            <div class="card-lead">
+              <div class="lead-name">NexGen Logística Holding</div>
+              <div class="lead-value">R$ 68.000 · Enterprise Anual</div>
+              <div class="lead-meta">
+                <span class="badge-tag">REUNIÃO AGENDADA</span>
+                <span>Hoje 16:30</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="col-header">
+              <span style="color:var(--emerald-contrast)">FECHADO & LIQUIDADO</span>
+              <span class="col-count" style="color:var(--emerald-contrast); background:var(--emerald-tint)">R$ 148.500</span>
+            </div>
+            <div class="card-lead" style="background:#F0FDF4;">
+              <div class="lead-name">Construtora Aliança</div>
+              <div class="lead-value won">R$ 82.000 · Contrato Assinado</div>
+              <div class="lead-meta">
+                <span class="badge-tag emerald">✓ PIX CONFIRMADO</span>
+                <span>Renan Franco</span>
+              </div>
+            </div>
+            <div class="card-lead" style="background:#F0FDF4;">
+              <div class="lead-name">Studio Brio Arquitetura</div>
+              <div class="lead-value won">R$ 38.500 · Fechado</div>
+              <div class="lead-meta">
+                <span class="badge-tag emerald">✓ CONTRATO ATIVO</span>
+                <span>Hoje</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="frame-pane" id="pane-saas">
+        <div class="frame-image-wrapper">
+          <img src="/img/amax-saas-desktop.jpg" alt="AMAX CRM Dashboard SaaS Desktop" loading="lazy">
+          <div class="hotspot-pin" style="top: 20%; left: 8%;">
+            <span class="dot-pulse"></span>
+            <span>METRIC ENGINE: <b>CONVERSÃO 38.4%</b></span>
+          </div>
+          <div class="hotspot-pin" style="bottom: 24%; right: 10%;">
+            <span>RADAR DE RETORNO: <b>ALERTAS NO TIMING EXATO</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame-pane" id="pane-empresas">
+        <div class="frame-image-wrapper">
+          <img src="/img/amax-empresas-dashboard.jpg" alt="AMAX CRM Módulo Multi-Tenant e Multi-Empresas" loading="lazy">
+          <div class="hotspot-pin" style="top: 25%; right: 14%;">
+            <span class="dot-pulse"></span>
+            <span>ISOLAMENTO TOTAL: <b>MULTI-TENANT SEGURO</b></span>
+          </div>
+          <div class="hotspot-pin" style="bottom: 18%; left: 10%;">
+            <span>GESTÃO CENTRALIZADA: <b>PLANOS E LIMITES</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame-pane" id="pane-mobile">
+        <div class="frame-image-wrapper">
+          <img src="/img/amax-mobile-comparison.jpg" alt="AMAX CRM Mobile PWA no iPhone e Android" loading="lazy">
+          <div class="hotspot-pin" style="top: 15%; left: 18%;">
+            <span>PWA NATIVO: <b>SEM TAXAS DE APP STORE</b></span>
+          </div>
+          <div class="hotspot-pin" style="bottom: 22%; right: 18%;">
+            <span class="dot-pulse"></span>
+            <span>VELOCIDADE PURA: <b>INSTALAÇÃO EM 10 SEGUNDOS</b></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STATIC EXECUTIVE METRICS BAR (ZERO NOISY TICKER) -->
+  <div class="metrics-proof-bar">
+    <div class="metrics-proof-grid">
+      <div class="metric-proof-item">
+        <div class="number">4.8X</div>
+        <div class="label">Velocidade Média de Fechamento</div>
+      </div>
+      <div class="metric-proof-item">
+        <div class="number">&lt; 90s</div>
+        <div class="label">Tempo de Resposta no WhatsApp</div>
+      </div>
+      <div class="metric-proof-item">
+        <div class="number">99.2%</div>
+        <div class="label">Taxa de Adesão da Equipe</div>
+      </div>
+      <div class="metric-proof-item">
+        <div class="number">1.2 MB</div>
+        <div class="label">Instalação PWA Leve no Celular</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE 4 CORE ENGINES -->
+  <section class="content-section">
+    <div class="section-head">
+      <h2 class="section-title">Engenharia comercial para operações que não aceitam perder clientes.</h2>
+      <p class="section-desc">Criado especificamente para prestadores de serviços, agências e esquadrões de vendas que fecham negócios via conversa direta.</p>
+    </div>
+
+    <div class="modules-grid">
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <span>MOTOR // 01</span>
+          </div>
+          <h3 class="mod-title">Cadência Automática de 4 Tentativas</h3>
+          <p class="mod-text">
+            O vendedor comum desiste no primeiro silêncio do lead. O AMAX agenda automaticamente os próximos 4 contatos em horários estratégicos, colocando a fila de tarefas do dia mastigada na tela do operador.
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>ALGORITMO: <b>TIMING DINÂMICO</b></span>
+          <span>TAXA DE RETENÇÃO: <b>+38.5%</b></span>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>MOTOR // 02</span>
+          </div>
+          <h3 class="mod-title">Acionamento WhatsApp em 1 Clique</h3>
+          <p class="mod-text">
+            Elimine a perda de tempo adicionando números na agenda do celular. Com um clique no card, o WhatsApp Web ou o app do celular abre com a mensagem personalizada pronta para envio e registra o histórico.
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>TEMPO POR CONTATO: <b>2.4s</b></span>
+          <span>INTEGRAÇÃO: <b>NATIVA & DIRETA</b></span>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>MOTOR // 03</span>
+          </div>
+          <h3 class="mod-title">Blindagem de Carteira & Multi-Tenant</h3>
+          <p class="mod-text">
+            Proteja seus leads contra vazamento e disputa interna. Cada vendedor só enxerga os contatos sob sua custódia. O gestor tem visão completa de metas, conversão individual e relatórios consolidados.
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>SEGURANÇA: <b>ROLES RIGOROSOS</b></span>
+          <span>MULTI-EMPRESAS: <b>NATIVO</b></span>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div>
+          <div class="mod-num">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <span>MOTOR // 04</span>
+          </div>
+          <h3 class="mod-title">PWA Ultraleve de 1.2MB no Celular</h3>
+          <p class="mod-text">
+            Sem download pesado de lojas de aplicativo. O AMAX roda via Progressive Web App direto na tela inicial do iPhone e Android. É instantâneo, não esquenta o celular e consome zero de bateria em standby.
+          </p>
+        </div>
+        <div class="mod-spec">
+          <span>TAMANHO DO APP: <b>1.2 MB</b></span>
+          <span>SUPORTE: <b>IOS & ANDROID</b></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMIC ROI SIMULATOR -->
+  <section class="content-section">
+    <div class="section-head">
+      <h2 class="section-title">Calcule quanto dinheiro você recupera por mês.</h2>
+      <p class="section-desc">Mova os controles abaixo para simular o resgate imediato de vendas perdidas aplicando a cadência de 4 etapas.</p>
+    </div>
+
+    <div class="roi-card">
+      <div>
+        <div class="slider-group">
+          <div class="slider-label-row">
+            <span>Volume de Leads Mensais no WhatsApp:</span>
+            <b id="val-leads">120</b>
+          </div>
+          <input type="range" min="20" max="600" step="10" value="120" class="custom-range" id="slider-leads">
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label-row">
+            <span>Ticket Médio por Negócio:</span>
+            <b id="val-ticket">R$ 3.500</b>
+          </div>
+          <input type="range" min="500" max="25000" step="500" value="3500" class="custom-range" id="slider-ticket">
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-label-row">
+            <span>Estimativa de Leads que Esfriam sem Follow-up:</span>
+            <b id="val-loss">35%</b>
+          </div>
+          <input type="range" min="15" max="60" step="5" value="35" class="custom-range" id="slider-loss">
+        </div>
+
+        <p style="font-size: 14px; color: var(--tx-muted); margin-top: 12px;">
+          * Cálculo baseado em dados médios de operações que resgataram até 35% dos leads abandonados através da rotina automatizada do AMAX.
+        </p>
+      </div>
+
+      <div class="roi-display-box">
+        <div>
+          <span class="roi-display-head">POTENCIAL DE RECEITA RECUPERADA</span>
+          <div class="roi-metric-big">
+            <div class="val" id="roi-recuperado">R$ 52.500</div>
+            <div class="desc">em faturamento adicional resgatado por mês</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="roi-meta-details">
+            <span>LEADS RESGATADOS: <b id="roi-leads-salvos">+15 contratos/mês</b></span>
+            <span>PROJEÇÃO ANUAL: <b id="roi-anual">R$ 630.000</b></span>
+          </div>
+          <a href="#" class="btn-roi-cta" id="btn-roi-cta" target="_blank" rel="noopener">
+            Recuperar Essa Receita no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name" style="color: #FFFFFF; font-size: 1.3rem;">AMAX // CRM</span>
+        <p class="footer-desc">
+          O sistema operacional comercial projetado para prestadores de serviço, agências e equipes comerciais de alta velocidade fecharem mais negócios no WhatsApp.
+          <br><br>
+          © 2026 AMAX CRM. Todos os direitos reservados.
+        </p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Páginas Oficiais</h5>
+          <ul>
+            <li><a href="/">Visão Geral</a></li>
+            <li><a href="/recursos">Recursos Técnicos</a></li>
+            <li><a href="/comparativo">Comparativo vs Planilhas</a></li>
+            <li><a href="/precos">Planos & Preços</a></li>
+            <li><a href="/seguranca">Segurança & LGPD</a></li>
+            <li><a href="/contato">Falar com Consultor</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Sistema & Login</h5>
+          <ul>
+            <li><a href="/">Acessar Cockpit</a></li>
+            <li><a href="https://wa.me/5511999999999" target="_blank">Atendimento via WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING DOCK -->
+  <div class="floating-dock">
+    <div class="dock-status">
+      <span class="dot-pulse"></span>
+      <span>AMAX OS ONLINE</span>
+    </div>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20consultor%20do%20AMAX%20CRM." class="dock-cta" target="_blank" rel="noopener">
+      <span>Falar com Consultor</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+  </div>
+
+  <script src="/js/three.min.js"></script>
+  <script src="/site-3d-engine.js?v=3.2.0"></script>
+  <script src="/site-light.js?v=3.2.0"></script>
+</body>
+</html>
